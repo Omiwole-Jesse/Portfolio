@@ -2,38 +2,49 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Jesse Fodunrin Omiwole — Logistics & Supply Chain Portfolio</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Jesse Fodunrin Omiwole — Logistics & Supply Chain</title>
 
-  <meta name="description" content="Logistics & Supply Chain professional with data-driven operations strength. ERP, inventory, optimisation, and coordination." />
+  <meta name="description" content="Logistics & Supply Chain professional with data-driven operations strength. Inventory, ERP, optimisation, coordination, and analytics." />
   <meta name="theme-color" content="#0b0c10" />
 
-  <link rel="preload" href="assets/hero.jpg" as="image" />
+  <!-- Open Graph (optional but nice) -->
+  <meta property="og:title" content="Jesse Fodunrin Omiwole — Logistics & Supply Chain" />
+  <meta property="og:description" content="Data-driven logistics. Strong coordination. Measurable impact." />
+  <meta property="og:image" content="assets/banner.png" />
+
+  <link rel="preload" href="assets/banner.png" as="image" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-  <!-- Ambient background -->
-  <div class="bg-ambient" aria-hidden="true"></div>
+  <!-- Scroll progress -->
+  <div class="progress" aria-hidden="true"><div class="progress__bar" id="progressBar"></div></div>
 
-  <!-- Header -->
-  <header class="header">
-    <div class="container">
-      <nav class="nav">
-        <a class="logo" href="#top" aria-label="Go to top">JFO</a>
+  <!-- Cursor glow -->
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
 
-        <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
-          <span></span><span></span><span></span>
+  <!-- Background grain -->
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a class="brand" href="#top" aria-label="Go to top">
+        <span class="brand__mark">J</span>
+        <span class="brand__text">Jesse Omiwole</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span>
         </button>
 
-        <div class="nav-links" id="navLinks">
-          <a class="nav-link" href="#about">About</a>
-          <a class="nav-link" href="#skills">Skills</a>
-          <a class="nav-link" href="#experience">Experience</a>
-          <a class="nav-link" href="#case-studies">Case Studies</a>
-          <a class="nav-link" href="#impact">Impact</a>
-          <a class="nav-link" href="#certs">Certifications</a>
-          <a class="btn btn-small" href="#contact">Contact</a>
+        <div class="nav__links" id="navLinks">
+          <a href="#about" class="nav__link">About</a>
+          <a href="#focus" class="nav__link">Focus</a>
+          <a href="#work" class="nav__link">Work</a>
+          <a href="#impact" class="nav__link">Impact</a>
+          <a href="#contact" class="nav__link nav__link--cta">Contact</a>
         </div>
       </nav>
     </div>
@@ -41,350 +52,392 @@
 
   <main id="top">
     <!-- HERO -->
-    <section class="hero container">
-      <div class="hero-copy reveal">
-        <p class="kicker">Logistics & Supply Chain • Data Science • Coordination</p>
-
-        <h1 class="headline">Jesse Fodunrin Omiwole</h1>
-
-        <p class="subhead">
-          Results-driven Logistics & Supply Chain professional who improves flow, accuracy, and decision-making through optimisation, data insight, and effective coordination.
-        </p>
-
-        <div class="proof">
-          <div class="proof-item">
-            <span class="proof-num">+20%</span>
-            <span class="proof-text">Reporting accuracy improvement through tighter documentation control</span>
-          </div>
-          <div class="proof-item">
-            <span class="proof-num">Inventory</span>
-            <span class="proof-text">Consistent tracking for truck accessories and operational assets</span>
-          </div>
-          <div class="proof-item">
-            <span class="proof-num">1-day</span>
-            <span class="proof-text">Time-critical delivery without quality loss</span>
-          </div>
-        </div>
-
-        <div class="cta">
-          <a class="btn" href="assets/cv.pdf" target="_blank" rel="noreferrer">View CV</a>
-          <a class="btn btn-ghost" href="https://www.linkedin.com/in/jesse-omiwole/" target="_blank" rel="noreferrer">LinkedIn</a>
-          <a class="btn btn-ghost" href="#case-studies">See case studies</a>
-        </div>
-
-        <div class="chips">
-          <span class="chip">ERP & Documentation</span>
-          <span class="chip">Inventory Control</span>
-          <span class="chip">Visualisation</span>
-          <span class="chip">Modelling</span>
-          <span class="chip">ISC² CC</span>
-          <span class="chip">Vibe Coding</span>
-        </div>
+    <section class="hero">
+      <div class="hero__bg">
+        <img src="assets/banner.png" alt="" class="hero__bgImg" />
+        <div class="hero__overlay"></div>
+        <div class="hero__shine"></div>
       </div>
 
-      <div class="hero-media reveal">
-        <div class="hero-photo-wrap">
-          <img class="hero-photo" src="assets/hero.jpg" alt="Portrait of Jesse Fodunrin Omiwole" />
-          <div class="hero-glow" aria-hidden="true"></div>
+      <div class="container hero__content">
+        <div class="hero__left reveal">
+          <p class="eyebrow">
+            Logistics & Supply Chain • Data Science • Coordination
+          </p>
+
+          <h1 class="hero__title">
+            Logistics-first.<br />
+            Data-driven.<br />
+            Built for delivery.
+          </h1>
+
+          <p class="hero__subtitle">
+            You hire a logistics professional who improves accuracy, visibility, and execution.
+            You get clear reporting, reliable tracking, and strong coordination.
+          </p>
+
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="assets/cv.pdf" target="_blank" rel="noreferrer">View CV</a>
+            <a class="btn btn--ghost" href="https://www.linkedin.com/in/jesse-omiwole/" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a class="btn btn--ghost" href="#work">See work</a>
+          </div>
+
+          <div class="hero__metrics">
+            <div class="metric">
+              <div class="metric__value" data-count="20">0</div>
+              <div class="metric__label">Reporting accuracy improvement (%)</div>
+            </div>
+            <div class="metric">
+              <div class="metric__value">ERP</div>
+              <div class="metric__label">Documentation control & traceability</div>
+            </div>
+            <div class="metric">
+              <div class="metric__value">1-day</div>
+              <div class="metric__label">Time-critical delivery without quality loss</div>
+            </div>
+          </div>
         </div>
 
-        <div class="hero-cards">
-          <article class="card-lite lift">
-            <h3 class="mini-title">Logistics-first</h3>
-            <p class="mini-text">You hire execution. You get structure, discipline, and delivery.</p>
-          </article>
-          <article class="card-lite lift">
-            <h3 class="mini-title">Data-driven</h3>
-            <p class="mini-text">You get dashboards, insights, and modelling that supports decisions.</p>
-          </article>
-          <article class="card-lite lift">
-            <h3 class="mini-title">Risk-aware</h3>
-            <p class="mini-text">Cybersecurity awareness applied to operational thinking.</p>
-          </article>
+        <div class="hero__right reveal">
+          <div class="heroCard">
+            <h3>Available for</h3>
+            <p>Supply Chain Analyst • Logistics Analyst • Operations Analyst • Inventory / Documentation roles</p>
+
+            <div class="pillRow">
+              <span class="pill">Inventory</span>
+              <span class="pill">Optimisation</span>
+              <span class="pill">Visualisation</span>
+              <span class="pill">Modelling</span>
+              <span class="pill">ISC² CC</span>
+            </div>
+
+            <div class="divider"></div>
+
+            <p class="muted">
+              Ask yourself:
+              <br />
+              Do you want your logistics decisions to be guided by clean data and predictable execution?
+            </p>
+          </div>
+
+          <!-- Marquee -->
+          <div class="marquee" aria-hidden="true">
+            <div class="marquee__track">
+              <span>Logistics Optimisation</span>
+              <span>Inventory Control</span>
+              <span>ERP & Documentation</span>
+              <span>Data Visualisation</span>
+              <span>Modelling</span>
+              <span>Humanitarian Coordination</span>
+
+              <span>Logistics Optimisation</span>
+              <span>Inventory Control</span>
+              <span>ERP & Documentation</span>
+              <span>Data Visualisation</span>
+              <span>Modelling</span>
+              <span>Humanitarian Coordination</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- ABOUT -->
-    <section id="about" class="section container reveal">
-      <h2>About</h2>
-      <p class="lead">
-        I improve logistics performance through clean reporting, reliable inventory control, and strong coordination.
-        I improved reporting accuracy by <strong>20%</strong> through tighter documentation control.
-        I also deliver time-critical operational work under <strong>one-day deadlines</strong> without quality loss.
-      </p>
+    <section id="about" class="section container">
+      <div class="sectionHead reveal">
+        <h2>About</h2>
+        <p>
+          Results-driven Logistics & Supply Chain professional with hands-on experience in ERP operations,
+          inventory tracking, and documentation control. I improved reporting accuracy by <b>20%</b> through tighter controls.
+        </p>
+      </div>
 
-      <div class="grid-2">
-        <article class="card lift">
-          <h3>What you can expect from me</h3>
-          <ul>
-            <li>Clear execution under pressure</li>
-            <li>Structured documentation and traceability</li>
-            <li>Operational coordination across people and timelines</li>
-            <li>Data visualisation that managers can use immediately</li>
+      <div class="grid2">
+        <article class="card reveal">
+          <h3>What you get</h3>
+          <ul class="list">
+            <li><b>Operational clarity</b> — clean records, fewer avoidable errors.</li>
+            <li><b>Coordination strength</b> — roles, timelines, and handoffs managed properly.</li>
+            <li><b>Data-backed decisions</b> — visuals and insights you can act on.</li>
+            <li><b>Risk awareness</b> — ISC² CC mindset applied to operations.</li>
           </ul>
         </article>
 
-        <article class="card lift">
-          <h3>Target roles</h3>
-          <ul>
-            <li>Supply Chain / Logistics Analyst</li>
-            <li>Operations Analyst (logistics)</li>
-            <li>Data Analyst (logistics & supply chain)</li>
-            <li>Inventory / Documentation Officer</li>
+        <article class="card reveal">
+          <h3>What I care about</h3>
+          <ul class="list">
+            <li>Reducing friction in fulfillment cycles.</li>
+            <li>Improving inventory accuracy and visibility.</li>
+            <li>Making reporting trustworthy for leadership.</li>
+            <li>Building systems that scale.</li>
           </ul>
         </article>
       </div>
     </section>
 
-    <!-- SKILLS -->
-    <section id="skills" class="section container reveal">
-      <h2>Skills</h2>
+    <!-- FOCUS -->
+    <section id="focus" class="section section--alt">
+      <div class="container">
+        <div class="sectionHead reveal">
+          <h2>Core focus</h2>
+          <p>Logistics comes first. Data strengthens it. Tech accelerates delivery.</p>
+        </div>
 
-      <div class="grid-3">
-        <article class="card lift">
-          <h3>Logistics & Supply Chain</h3>
-          <ul class="mini">
-            <li>Inventory tracking and control</li>
-            <li>ERP operations support</li>
-            <li>Documentation control and reporting</li>
-            <li>Operational optimisation mindset</li>
-            <li>Humanitarian logistics coordination</li>
-          </ul>
-        </article>
+        <div class="grid3">
+          <article class="card reveal">
+            <div class="icon">⛓️</div>
+            <h3>Logistics & Supply Chain</h3>
+            <p class="muted">Inventory, ERP support, documentation control, and operational execution.</p>
+            <ul class="list">
+              <li>Inventory tracking (truck accessories & assets)</li>
+              <li>Documentation workflows and checks</li>
+              <li>Operations support and coordination</li>
+              <li>Humanitarian logistics coordination</li>
+            </ul>
+          </article>
 
-        <article class="card lift">
-          <h3>Data Science</h3>
-          <ul class="mini">
-            <li>Data cleaning and EDA</li>
-            <li>Visualisation and insight storytelling</li>
-            <li>Modelling fundamentals (pipelines)</li>
-            <li>Interpreting outputs for stakeholders</li>
-          </ul>
-        </article>
+          <article class="card reveal">
+            <div class="icon">📊</div>
+            <h3>Data Science</h3>
+            <p class="muted">You get insight, not noise. Visuals that guide decisions.</p>
+            <ul class="list">
+              <li>EDA, cleaning, and feature thinking</li>
+              <li>Visualisation and interpretation</li>
+              <li>Modelling fundamentals (pipelines)</li>
+              <li>Manager-friendly explanations</li>
+            </ul>
+          </article>
 
-        <article class="card lift">
-          <h3>Tech + Delivery</h3>
-          <ul class="mini">
-            <li>Vibe coding and rapid prototyping</li>
-            <li>HTML / CSS / JavaScript</li>
-            <li>Presentation and stakeholder communication</li>
-            <li>Cybersecurity awareness (ISC² CC)</li>
-          </ul>
-        </article>
+          <article class="card reveal">
+            <div class="icon">⚡</div>
+            <h3>Tech + “Vibe Coding”</h3>
+            <p class="muted">Fast shipping. Clean UI. Smooth interactions.</p>
+            <ul class="list">
+              <li>HTML / CSS / JavaScript</li>
+              <li>Rapid prototyping and iteration</li>
+              <li>Animation + micro-interactions</li>
+              <li>Digital delivery mindset</li>
+            </ul>
+          </article>
+        </div>
       </div>
     </section>
 
-    <!-- EXPERIENCE -->
-    <section id="experience" class="section container reveal">
-      <h2>Experience</h2>
-
-      <div class="timeline">
-        <article class="item card lift">
-          <h3>Enterprise Resource Planner & Documentation Officer — GPC Energy & Logistics</h3>
-          <p class="meta">May 2022 – March 2023</p>
-          <ul>
-            <li>Managed ERP operations, inventory tracking, and documentation control.</li>
-            <li>Improved reporting accuracy by <strong>20%</strong> through structured documentation processes.</li>
-            <li>Supported consistent inventory tracking for <strong>truck accessories</strong> and operational assets.</li>
-            <li>Conducted inspections to support accuracy and compliance in asset handling.</li>
-          </ul>
-        </article>
-
-        <article class="item card lift">
-          <h3>Team Lead — University of the West of Scotland</h3>
-          <p class="meta">Academic presentations and group coordination</p>
-          <ul>
-            <li>Led presentations on the criticality of coordination in humanitarian logistics.</li>
-            <li>Coordinated tasks, timelines, and delivery quality across team members.</li>
-            <li>Explained practical fixes: shared planning, defined roles, and reporting rhythm.</li>
-          </ul>
-        </article>
-
-        <article class="item card lift">
-          <h3>Demola Project — “Own The Change”</h3>
-          <p class="meta">2024</p>
-          <ul>
-            <li>Contributed to solutions focused on trust and community ownership.</li>
-            <li>Participated in ideation, iteration, and pitching with a team.</li>
-            <li>Supported app improvement discussions and stakeholder-centred thinking.</li>
-          </ul>
-        </article>
-
-        <article class="item card lift">
-          <h3>Creative Director — Dreamwaves Design</h3>
-          <p class="meta">2016 – Present</p>
-          <ul>
-            <li>Led end-to-end design and print operations.</li>
-            <li>Delivered full projects under <strong>one-day deadlines</strong> without quality loss.</li>
-            <li>Trained interns and supervised output quality and timelines.</li>
-          </ul>
-        </article>
-
-        <article class="item card lift">
-          <h3>Co-Founder — Breaking Cycles Scotland</h3>
-          <p class="meta">October 2025 – Present</p>
-          <ul>
-            <li>Co-founded a peer-inspired, sustainability-driven initiative for prevention and recovery support.</li>
-            <li>Coordinated campaigns and partner engagement for broader reach.</li>
-            <li>Managed digital presence and website delivery.</li>
-          </ul>
-        </article>
-
-        <article class="item card lift">
-          <h3>Security Supervisor (Door Supervisor) — Security Scotland</h3>
-          <p class="meta">May 2025 – Present</p>
-          <ul>
-            <li>Supervised access control and ensured safe operations during live environments.</li>
-            <li>Applied situational awareness and conflict management aligned with standards.</li>
-          </ul>
-        </article>
-      </div>
-    </section>
-
-    <!-- CASE STUDIES -->
-    <section id="case-studies" class="section container reveal">
-      <h2>Case Studies</h2>
-      <p class="lead">Short. Specific. Recruiter-friendly. Easy to defend.</p>
-
-      <div class="grid-3">
-        <article class="card lift">
-          <h3>ERP documentation improvement</h3>
-          <p>Improved reporting accuracy by 20% using tighter documentation control and checks.</p>
-          <ul class="tags"><li>ERP</li><li>Controls</li><li>Reporting</li></ul>
-          <button class="btn btn-small" data-modal="cs1">View details</button>
-        </article>
-
-        <article class="card lift">
-          <h3>Inventory tracking (truck accessories)</h3>
-          <p>Built consistent tracking to support operational reliability and audit readiness.</p>
-          <ul class="tags"><li>Inventory</li><li>Accuracy</li><li>Records</li></ul>
-          <button class="btn btn-small" data-modal="cs2">View details</button>
-        </article>
-
-        <article class="card lift">
-          <h3>Humanitarian coordination</h3>
-          <p>Presented why coordination determines response speed, coverage, and fairness.</p>
-          <ul class="tags"><li>Coordination</li><li>Comms</li><li>Systems</li></ul>
-          <button class="btn btn-small" data-modal="cs3">View details</button>
-        </article>
+    <!-- WORK -->
+    <section id="work" class="section container">
+      <div class="sectionHead reveal">
+        <h2>Work highlights</h2>
+        <p>Short, specific, recruiter-friendly. Built to defend in interviews.</p>
       </div>
 
-      <!-- Modal -->
-      <div class="modal" id="modal" aria-hidden="true">
-        <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-          <div class="modal-head">
-            <h3 id="modalTitle">Case study</h3>
-            <button class="icon-btn" id="closeModal" aria-label="Close">✕</button>
+      <div class="workGrid">
+        <article class="workCard reveal" data-modal="cs1">
+          <div class="workCard__top">
+            <div class="badge">GPC Energy & Logistics</div>
+            <h3>ERP documentation improvement</h3>
+            <p class="muted">Improved reporting accuracy by 20% through tighter checks and structured records.</p>
           </div>
-          <div id="modalBody" class="modal-body"></div>
+          <div class="workCard__bottom">
+            <span class="tag">ERP</span><span class="tag">Controls</span><span class="tag">Reporting</span>
+            <button class="linkBtn" type="button">Open →</button>
+          </div>
+        </article>
+
+        <article class="workCard reveal" data-modal="cs2">
+          <div class="workCard__top">
+            <div class="badge">Inventory</div>
+            <h3>Tracking: truck accessories</h3>
+            <p class="muted">Supported consistent tracking and record clarity for reliable operational visibility.</p>
+          </div>
+          <div class="workCard__bottom">
+            <span class="tag">Inventory</span><span class="tag">Accuracy</span><span class="tag">Records</span>
+            <button class="linkBtn" type="button">Open →</button>
+          </div>
+        </article>
+
+        <article class="workCard reveal" data-modal="cs3">
+          <div class="workCard__top">
+            <div class="badge">UWS</div>
+            <h3>Humanitarian coordination</h3>
+            <p class="muted">Presented why coordination determines response speed, coverage, and fairness.</p>
+          </div>
+          <div class="workCard__bottom">
+            <span class="tag">Coordination</span><span class="tag">Comms</span><span class="tag">Systems</span>
+            <button class="linkBtn" type="button">Open →</button>
+          </div>
+        </article>
+
+        <article class="workCard reveal" data-modal="cs4">
+          <div class="workCard__top">
+            <div class="badge">Demola 2025</div>
+            <h3>Own The Change</h3>
+            <p class="muted">Team contributor: solutions to improve trust and community ownership.</p>
+          </div>
+          <div class="workCard__bottom">
+            <span class="tag">Innovation</span><span class="tag">Teamwork</span><span class="tag">Delivery</span>
+            <button class="linkBtn" type="button">Open →</button>
+          </div>
+        </article>
+      </div>
+
+      <!-- Visual gallery -->
+      <div class="gallery reveal">
+        <div class="gallery__head">
+          <h3 class="gallery__title">Real-world engagement</h3>
+          <p class="muted">Use real images. It increases trust fast.</p>
+        </div>
+
+        <div class="gallery__grid">
+          <img src="assets/community-1.jpg" alt="Engagement photo 1" loading="lazy" />
+          <img src="assets/community-2.jpg" alt="Engagement photo 2" loading="lazy" />
+          <img src="assets/community-3.jpg" alt="Engagement photo 3" loading="lazy" />
+          <img src="assets/community-4.jpg" alt="Engagement photo 4" loading="lazy" />
         </div>
       </div>
     </section>
 
     <!-- IMPACT -->
-    <section id="impact" class="section container reveal">
-      <h2>Leadership & Social Impact</h2>
+    <section id="impact" class="section section--alt">
+      <div class="container">
+        <div class="sectionHead reveal">
+          <h2>Leadership & impact</h2>
+          <p>Community work matters. But it must stay aligned with your logistics story.</p>
+        </div>
 
-      <div class="grid-2">
-        <article class="card lift">
-          <h3>Breaking Cycles Scotland</h3>
-          <p class="lead">
-            Peer-inspired and sustainability-driven. Partnership-led for reach and impact.
-          </p>
+        <div class="grid2">
+          <article class="card reveal">
+            <h3>Breaking Cycles Scotland (Co-Founder)</h3>
+            <p class="muted">
+              Peer-inspired and sustainability-driven recovery support. Partnership-led for reach.
+            </p>
 
-          <h4 class="h4">Core objectives</h4>
-          <ul>
-            <li><strong>Prevention & early support:</strong> school-based awareness, stigma reduction, early intervention.</li>
-            <li><strong>Sustainable recovery:</strong> recovery plans, peer mentorship, housing stability, skills for employment.</li>
-            <li><strong>Community empowerment:</strong> recovery hubs with families, schools, and leaders involved.</li>
-            <li><strong>Long-term sustainability:</strong> resilience and independence built into recovery pathways.</li>
-          </ul>
+            <div class="split">
+              <div>
+                <h4>Core objectives</h4>
+                <ul class="list">
+                  <li><b>Prevention:</b> awareness, stigma reduction, early intervention.</li>
+                  <li><b>Recovery support:</b> plans, mentorship, stability, skills for employment.</li>
+                  <li><b>Community hubs:</b> families, schools, leaders involved.</li>
+                  <li><b>Sustainability:</b> resilience and independence built in.</li>
+                </ul>
+              </div>
 
-          <h4 class="h4">Partners</h4>
-          <ul class="tags">
-            <li>Uniforce</li>
-            <li>UWS Union</li>
-            <li>PIP Scotland</li>
-            <li>Fast Forward Scotland</li>
-          </ul>
+              <div>
+                <h4>Partners</h4>
+                <div class="tagRow">
+                  <span class="tag">Uniforce</span>
+                  <span class="tag">UWS Union</span>
+                  <span class="tag">PIP Scotland</span>
+                  <span class="tag">Fast Forward Scotland</span>
+                </div>
 
-          <p class="note">
-            Project site:
-            <a href="https://breakingcyclesscot.wixsite.com/breaking-cycles-sc-1" target="_blank" rel="noreferrer">Breaking Cycles Scotland</a>
-          </p>
-        </article>
+                <a class="btn btn--ghost btn--block" href="https://breakingcyclesscot.wixsite.com/breaking-cycles-sc-1" target="_blank" rel="noreferrer">
+                  Visit project site
+                </a>
+              </div>
+            </div>
+          </article>
 
-        <article class="card lift">
-          <h3>Real engagement</h3>
-          <p class="lead">Photos from outreach and events.</p>
+          <article class="card reveal">
+            <h3>Certifications</h3>
+            <div class="certs">
+              <div class="cert">
+                <div class="cert__mark">ISC²</div>
+                <div>
+                  <div class="cert__title">Certified in Cybersecurity (CC)</div>
+                  <div class="muted">Risk awareness applied to operational thinking.</div>
+                </div>
+              </div>
 
-          <div class="photo-grid">
-            <img src="assets/community-1.jpg" alt="Community engagement photo 1" loading="lazy" />
-            <img src="assets/community-2.jpg" alt="Community engagement photo 2" loading="lazy" />
-            <img src="assets/community-3.jpg" alt="Community engagement photo 3" loading="lazy" />
-            <img src="assets/community-4.jpg" alt="Community engagement photo 4" loading="lazy" />
-          </div>
+              <div class="cert">
+                <div class="cert__mark">SIA</div>
+                <div>
+                  <div class="cert__title">Door Supervisor</div>
+                  <div class="muted">Situational awareness and calm execution.</div>
+                </div>
+              </div>
+            </div>
 
-          <p class="note">This demonstrates stakeholder engagement, trust-building, and communication.</p>
-        </article>
-      </div>
-    </section>
+            <div class="divider"></div>
 
-    <!-- CERTS -->
-    <section id="certs" class="section container reveal">
-      <h2>Certifications</h2>
-
-      <div class="grid-2">
-        <article class="card lift">
-          <h3>ISC² Certified in Cybersecurity (CC)</h3>
-          <p class="lead">Security awareness applied to operations: risk thinking, responsible access, governance-friendly practices.</p>
-        </article>
-
-        <article class="card lift">
-          <h3>Other</h3>
-          <ul class="mini">
-            <li>SIA Door Supervisor Certification</li>
-            <li>HSE (Alpha Consult, 2023)</li>
-            <li>Human Resource Management (Alpha Consult, 2023)</li>
-          </ul>
-        </article>
+            <h3>Tools</h3>
+            <div class="tagRow">
+              <span class="tag">Excel</span>
+              <span class="tag">PowerPoint</span>
+              <span class="tag">Data Visualisation</span>
+              <span class="tag">Modelling</span>
+              <span class="tag">Web Admin</span>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 
     <!-- CONTACT -->
-    <section id="contact" class="section container reveal">
-      <h2>Contact</h2>
+    <section id="contact" class="section container">
+      <div class="sectionHead reveal">
+        <h2>Contact</h2>
+        <p>Send the job title. Send the challenge. I’ll tell you how I’d approach it.</p>
+      </div>
 
-      <div class="grid-2">
-        <article class="card lift">
+      <div class="grid2">
+        <article class="card reveal">
           <h3>Reach me</h3>
-          <ul>
-            <li>Email: <a href="mailto:officialomiwolejesse@gmail.com">officialomiwolejesse@gmail.com</a></li>
-            <li>LinkedIn: <a href="https://www.linkedin.com/in/jesse-omiwole/" target="_blank" rel="noreferrer">jesse-omiwole</a></li>
-          </ul>
+          <div class="contactRow">
+            <span class="muted">Email</span>
+            <a href="mailto:officialomiwolejesse@gmail.com">officialomiwolejesse@gmail.com</a>
+          </div>
+          <div class="contactRow">
+            <span class="muted">LinkedIn</span>
+            <a href="https://www.linkedin.com/in/jesse-omiwole/" target="_blank" rel="noreferrer">linkedin.com/in/jesse-omiwole</a>
+          </div>
 
-          <div class="cta">
-            <a class="btn" href="mailto:officialomiwolejesse@gmail.com?subject=Portfolio%20Inquiry%20-%20Jesse%20Omiwole">Email me</a>
-            <a class="btn btn-ghost" href="#top">Back to top</a>
+          <div class="btnRow">
+            <a class="btn btn--primary" href="mailto:officialomiwolejesse@gmail.com?subject=Portfolio%20Inquiry%20-%20Jesse%20Omiwole">Email me</a>
+            <a class="btn btn--ghost" href="#top">Back to top</a>
           </div>
         </article>
 
-        <article class="card lift">
-          <h3>Tell me what you need solved</h3>
-          <p class="lead">
-            What is your biggest logistics challenge right now?
-            Lead time, inventory accuracy, cost control, or coordination?
+        <article class="card reveal">
+          <h3>Question for you</h3>
+          <p class="muted">
+            What hurts most in your supply chain right now?
           </p>
-          <p class="note">Send the job title and the challenge. I’ll respond with how I’d approach it.</p>
+          <ul class="list">
+            <li>Inventory accuracy?</li>
+            <li>Lead time and delays?</li>
+            <li>Documentation errors?</li>
+            <li>Cost and waste?</li>
+            <li>Coordination and handoffs?</li>
+          </ul>
+          <p class="muted">If you tell me the biggest one, I can tailor the portfolio to match that role.</p>
         </article>
       </div>
     </section>
 
-    <footer class="footer container">
-      <p>© <span id="year"></span> Jesse Fodunrin Omiwole</p>
+    <footer class="footer">
+      <div class="container footer__inner">
+        <div class="footer__left">
+          <b>Jesse Fodunrin Omiwole</b>
+          <div class="muted">Logistics & Supply Chain • Data Science • Coordination</div>
+        </div>
+        <div class="footer__right muted">
+          © <span id="year"></span>
+        </div>
+      </div>
     </footer>
   </main>
+
+  <!-- Modal -->
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modal__card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div class="modal__head">
+        <h3 id="modalTitle">Case study</h3>
+        <button class="iconBtn" id="closeModal" aria-label="Close">✕</button>
+      </div>
+      <div id="modalBody" class="modal__body"></div>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
